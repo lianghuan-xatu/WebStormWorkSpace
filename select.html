@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <select id="sex" name="sex">
+        <option selected>---请选则---</option>
+        <option>男</option>
+        <option>女</option>
+    </select>
+</body>
+<script type="text/javascript">
+    document.getElementById("sex").onchange=function () {
+        alert(this.selectedIndex);//被选中的索引
+      // 获得select下所有option
+
+        // 遍历这些option
+        // 判断是否被选中（  上述 可以看通过DHTML来实现  优先考虑DHTML）
+        var option=this.options[this.selectedIndex];
+        //是---》获得option内容
+        //获得上一个页面的window对象   opener
+        var doc= window.opener.document;
+        //将上一个页面的性别文本框找到并赋值
+doc.getElementById("sex").value=option.innerHTML;
+        window.close();
+    }
+</script>
+</html>

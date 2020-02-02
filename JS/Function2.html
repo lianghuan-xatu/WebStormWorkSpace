@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    //  Function对象
+    function fun1(){
+        alert('aaa');
+    }
+    var fun2=new Function("alert('aaa')");
+
+    var fun3=function(){
+        alert('aaa');
+    }
+    // Function 的属性和调用
+    function fun5(a,b){
+        alert(a+b);}
+    alert(fun1.length);   //   length属性是函数的参数个数
+    fun1(1,2);
+    fun1(1,2,3);
+    fun1();
+    //函数的调用，只看函数名称，不看参数列表
+    function a(a,b){
+        alert(a+b);
+    }
+    var a=1;
+    var b=2;
+    a(a,b);
+    //结论 ： 24行函数定义时使用变量a接受，27行 ，又定义了变量名为a的变量   产生了覆盖
+
+//Function调用的进阶
+    //函数函数期间的内置对象
+    //内置对象 arguments
+    function fun1(){
+      //  alert(arguments.length);
+        for(var i=0;i<arguments.length;i++){}
+        alert(arguments[i]);//arguments 代表实际运行时的参数
+    }
+    fun1();//0
+    fun1(1,2);//2
+    fun1(1,2,3);//3
+    //js中是否存在重载
+    // function fun2(){
+    //     if(arguments.length==2){
+    //         alert(arguments[0]+arguments[1]);
+    //     }else if(arguments.length==3){
+    //         alert(arguments[0]+arguments[1]-arguments[2]);
+    //     }
+    // }
+    // fun2(1,2);//3
+    // fun2(1,2,3); //0
+    function fun2(){
+        if(arguments.length==2){
+            if((typeof  arguments[0]=='string') && (typeof arguments[1]=='string')){
+                alert(arguments[0]>arguments[1]);
+            }else{
+            alert(arguments[0]+arguments[1]);}
+        }else if(arguments.length==3){
+            alert(arguments[0]+arguments[1]-arguments[2]);
+        }
+    }
+    fun2("a","b"); //false
+function fun1(a,b){
+    return a+b;
+}
+alert(fun1(1,2));//3
+
+  function fun2(){
+      alert('aaa');
+      return;
+      alert('bbb');
+  }</script>
+ // fun2();   //aaa
+    </head>
+
+    <body>
+
+    <a href="javascript:alert('aaa')">点我</a>
+    <a href="javascript:fun1(1,2)">点我</a>//将函数的返回值 当作资源呈现
+    <a href="javascript:void (fun1(1,2))">点我</a>
+
+
+
+
+</body>
+</html>

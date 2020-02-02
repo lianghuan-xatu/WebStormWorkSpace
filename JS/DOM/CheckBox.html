@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="">
+    请选择您的爱好！
+    <br><input type="checkbox" id="checkedAll_2">全选/全不选
+    <br/>
+    <input type="checkbox" name="items" value="足球"/>足球
+    <input type="checkbox" name="items" value="篮球"/>篮球
+    <input type="checkbox" name="items" value="游泳"/>游泳
+    <input type="checkbox" name="items" value="唱歌"/>唱歌
+    <br/>
+    <input type="button" id="CheckedAll" value="全选"/>
+    <input type="button" id="CheckedNo" value="全不选"/>
+    <input type="button" id="CheckedRev" value="反选"/>
+</form>
+
+</body>
+<script type="text/javascript">
+    //反选
+      document .getElementById("CheckedRev").onclick=function () {
+          //获得所有爱好的checkbox对象
+          //遍历    进行反选
+           var items=document.getElementsByName("items");
+           for(var i=0;i<items.length;i++){
+              var item=items[i];
+               item.checked=!item.checked;
+
+
+           }
+
+      }
+</script>
+</html>

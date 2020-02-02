@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="fun1();">
+    <select id="province">
+        <option>---请选择省----</option>
+    </select>
+    <select id="city">
+        <option>---请选择市----</option>
+    </select>
+
+</body>
+<script type="text/javascript">
+//     //JS中的map
+//     var json={"name":"tom","age":18};
+// //遍历  根据键来取值
+//     for(var key in json){
+//         alert(key);
+//         alert(json[key]);
+//     }
+    var json={"黑龙江省":["哈尔滨","佳木斯","齐齐哈尔"],"河北省":["沧州市","石家庄","廊坊"],"山西省":["太原","大同","运城"]};
+//---当页面加载完成时 将json中的省组装成option填入select对象
+    function fun1() {
+        //获得省的对象   遍历json中的键   组装对象 加入select
+        var province=document.getElementById("province");
+        for(var key in json){
+            var option=document.createElement("option");
+            option.innerHTML=key;
+            province.appendChild(option);
+        }
+    }
+    //-------当选择省  添加对应的市
+    document.getElementById("province").onchange=function () {
+        var city= document.getElementById("city");
+        city.length=1;
+        //获得用户选择的省
+        var key=this.options[this.selectedIndex].innerHTML;
+        //把省作为key  从json中取值
+        var cities=json[key];
+        //遍历数组    组装option  添加下拉栏
+        for(var i;i<cities.length;i++){
+            var option=document.createElement("option");
+            option.innerHTML=cities[i];
+           city.appendChild(option);
+        }
+    }
+</script>
+</html>

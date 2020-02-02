@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #one{
+            border:1px solid red;
+            width: 300px;
+            height: 300px;
+        }
+        #two{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }
+        #three{
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        //onsubmit  当表单提交时触发 ，form  元素   专属事件
+        //onsubmit   事件是所有事件中最特殊的一个     特殊在可以通过一个返回值来就控制表单是否提交
+        //返回值的类型是boolean 类型
+    document.getElementById("one").onsubmit=function () {
+        //1、验证表单
+        alert('验证失败');
+
+        //2、验证失败==》  拦截表单提交
+        return  false;
+        //如果返回会false 表示表单不提交
+        //如果返回true或者不返回==》表单提交
+        event.preventDefault();//此代码也可以阻止表单提交    当按下按钮 ，相当于需要执行表单提交    该操作会阻止事件的默认动作
+
+    }
+    </script>
+
+</head>
+<body>
+  <form action="#"  id="one" onsubmit="alert('表单提交了');">
+      <input type="text" name="name"/>
+      <input type="submit" value="OK"/>
+  </form>
+
+<div id="two">
+    <div id="three">
+
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+   document.getElementById("one").onclick=function () {
+       alert('one');
+   }
+   document.getElementById("two").onclick=function (event) {
+       alert('two');
+       event.stopPropagation();//阻止事件的传播
+   }
+</script>

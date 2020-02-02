@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // var a=-1;
+        // var b=+1;  //var b=1;
+        // var c=-"1";  //会将字符转换成数字
+
+        //js中会自动将类型转换为需要的类型
+
+    if(20){
+        alert(true);
+    }else{
+        alert(false);
+    }
+        if(0){
+            alert(true);
+        }else{
+            alert(false);
+        }
+        //number 转换为 boolean     除了  +0、-0 其他都转换为true
+        if(new Object()){
+            alert(true);
+        }else{
+            alert(false);
+        }
+    var a="1"+"1";//11
+        var b="1"+1;   //2
+
+        var a =10;
+        var b=20;
+        var c="100";
+        var d="20";
+        alert(a<b);   //true
+        alert(a<c);  //一列是数字  一列是字符串   将会把字符串转换成数字进行运算
+        alert(d<c);  //两列都是字符串 将会进行字符串之间的运算
+
+       //NaN  ： 非数字的特殊值
+        // NaN和的所有除过！=的运算都返回false
+        //  null==undefined   true
+        // "NaN"==NaN    false
+        // NaN==NaN    false
+        // NaN!=NaN   true
+        // "5"==5   true
+        // null==0    false
+        // true==2    true
+        // undefined==0   false
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+        <font id="one" color="red">haha</font>
+        <script type="text/javascript">
+            //DOM当中的所有对象，都是由浏览器创建维护的，对我们开发而言，只需要获取和使用即可
+            //获得document    document对象在创建好之后，会交给window对象管理
+            alert(document.nodeName);  //#document
+            alert(document.nodeValue);  //null
+            alert(document.nodeType);  //9
+            //获取element
+            var one= document.getElementById("one");
+            alert(one.nodeName); //FONT
+            alert(one.nodeValue); //null
+            alert(one.nodeType); //1
+            var color =one.getAttributeNode("color");
+            alert(color.nodeName); //color
+            alert(color.nodeValue); //red
+            alert(color.nodeType); //2
+            var haha=one.firstChild;
+            alert(haha.nodeName); //#text
+            alert(haha.nodeValue); //haha
+            alert(haha.nodeType); //3
+        </script>
+</body>
+</html>

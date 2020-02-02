@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="one">
+    <input type="text" name="userName" id="two" class="two" />
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+    var div=document.getElementById("one");
+    //获得id为one的div元素中的input元素
+    //根据id找    不支持
+      var two=div.getElementById("two");
+      alert(two);
+      // 根据class查找    支持
+    var two=div.getElementsByClassName("two")[0];
+    alert(two);
+    // 根据标签名称查找   不支持/[=
+    var two=div.getElementsByTagName("userName")[0];
+    alert(two);
+    //获取页面中元素的方式:
+    document.getElementById();
+    document.getElementsByClassName();
+    document.getElementsByTagName();
+    document.getElementsByName();
+    //获取元素范围内的子元素：
+   //  xxx.getElementByClassName();
+   // xxx.getElementByTagName();
+
+
+</script>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>
+
+    <font color="#a52a2a" > Hello World!</font>
+    窗前明月光，<br/>疑是地上霜。<br/>
+    举头望明月，<br/>低头思故乡。<br/>
+     换行标签
+    <hr/> 横线
+     段落标签   带两个回车    开始一个回车，结束一个回车
+<pre>
+    public static void main(String [] args){
+
+    }
+</pre>
+原样输出
+
+</p>
+<!--
+    <hn>:标题n取值1~6，加粗
+-->
+<h6>静夜思</h6>
+<font color="red" face="微软雅黑" size="5">李白</font>
+<i>斜体测试</i><br/>
+<strike>划横线测试</strike><br/>
+
+<hr>
+数学<br>
+3<sup>2</sup>
+<hr>
+3<sub>2</sub>
+<hr>
+大小于号：
+a&lt;b<br>
+b&gt;a<br>
+空格： aaa&nbsp;&nbsp;aaa
+
+<!--
+    ul:无序列表unordered list
+     type属性：   disc:实心圆
+     square: 矩形
+     circle:空心圆
+    ol:有序列表order list
+        li:列表中的项目
+        type属性：
+        A   a   I  i   1
+        I:罗马数字
+
+        start: 开始序号
+ -->
+<hr>
+<ul type="circle" >
+    <li>抽烟</li>
+    <li>喝酒</li>
+    <li>烫头</li>
+
+</ul>
+<ol type="I" start="4">
+    <li>抽烟</li>
+    <li>喝酒</li>
+    <li>烫头</li>
+</ol>
+<hr>
+
+<dl>
+   <dt>RPG<dt/>
+       <dd>仙剑奇侠传</dd>
+       <dd>金庸群侠传<dd/>
+        <dd>轩辕剑<dd/>
+   <dt>mmoba</dt>
+      <dd>红色警戒<dd/>
+       <dd>星际争霸</dd>
+        <dd>魔兽争霸3<dd/>
+   <dt>fps</dt>
+          <dd> 雷神之锤</dd>
+          <dd> cs</dd>
+           <dd>虚幻</dd>
+
+
+</dl>
+
+<!--
+  dl：声明一个列表   definition list
+  dt：声明一个标题   definition title
+  dd：标题下的项目   definition description
+  -->
+
+</body>
+<!--
+  <img src="路径" alt=""/>
+  alt :图片没有成功加载显示的提示信息
+  title：鼠标悬浮显示的提示信息
+  width：宽度    像素为单位
+  height:高度    像素为单位
+  border:边框宽度   像素为单位
+-->
+
+
+<>
+    <a name="_top"></a>
+    <a href="http://www.itcast.cn">传智播客</a>
+    <a href="mailto:1960950068@qq.com">传智播客</a>
+    <a name="_middle"></a>
+<!--
+a标签为超链接标签
+href 链接跳转位置
+   协议 ：  http
+            ftp
+            mailto
+            thunder
+target 属性：
+        _self
+        _parent
+        _top    在当前页面打开
+        _blank
+        framename  在框架中的使用
+
+锚功能：
+   #表示:1、使用锚点  2、当前页面
+
+
+-->
+<a href="#_top">回到顶部</a>
+<a href="_middle">回到中间</a>
+
+
+</body>
+
+<body>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>  <td>行1列1</td>   <td colspan="2">行1列2</td>  </tr>
+        <tr>  <td>行2列1</td>   <td>行2列2</td>   <td>行2列3</td></tr>
+        <tr>  <td>行3列1</td>   <td>行3列2</td>   <td rowspan="2">行3列3</td> </tr>
+        <th colspan="2">表头    </th>
+    </table>
+<!--
+cellpadding  内边距
+cellspacing  外边距
+colspan="2"   行跨2个
+align属性：数据位置  居中
+ <th colspan="2">表头    </th>    table header 居中加粗
+-->
+</body>
+</html>

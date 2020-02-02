@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //window对象
+        //open方法    打开一个新的窗口
+        //参数1   新窗口的地址
+        //参数2   新打开窗口的名称  没用
+        //参数3  新打开窗口的属性
+        //参数4  是否将新窗口打开的地址，列入到浏览器历史记录中
+        open("http://www.itcast.cn","","width=200,height=100");
+        //窗口之间的通信   self   parent   top
+
+
+        //window对象
+        //setInterval  循环执行
+        //clearInterval
+       var id= setInterval("alert('aaa')",3000); //每隔参数二毫秒数    执行参数一代码
+        clearInterval(id);//清除计数器
+
+        function f() {
+            alert('aaa');
+        }
+       var id2= setInterval("f();",3000);
+        var id3=setInterval(f,3000);
+
+
+        //setTimeout   该方法也是定时器方法  只是只执行一次   上面的方法循环执行
+        //clearTimeout
+    </script>
+</head>
+<body>
+
+</body>
+</html>

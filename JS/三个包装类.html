@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script type="text/javascript">
+
+
+        //包装应用
+        var i=10;
+        var str=new String(i);//将number转换为String    10+“”
+        var str2="10";
+        var num2=new Number(str2);//将字符串转换为数字   +"10"
+        var b3=true;
+        var num3=new Number(b3);//将布尔转换为数字   true+0
+        //以上转换不实用
+
+
+
+
+        //方法
+        //没有用的方法：
+        //achor()辅助生成a标签代码
+        //big()辅助身高生成big标签
+        //
+        var str2="aaa";
+      //  alert(str2.anchor());
+        var str3="hello world";
+        alert(str3.charAt(0));
+        alert(str3.charCodeAt(0));//对应字符的数字
+//indexOf()
+//lastIndexOf()
+        //slice()
+        //subString
+        //toLowerCase()
+
+    </script>
+</head>
+<body>
+<!--
+三个包装类
+java  :
+int Integer
+long Long
+
+Interger i=1;  自动装箱
+int i=new Integer(1); 自动拆箱  方便基本数据类型和原始类型之间的转换
+
+
+
+JS :
+伪对象 ：  原始类型可以直接使用对象类型的方法
+string   String
+number   Number
+boolean  Boolean
+以上三个包装类，只有一个是重要的
+包装
+-->
+
+
+
+
+</body>
+</html>

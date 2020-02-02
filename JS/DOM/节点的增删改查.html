@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            border:#0099FF 1px solid;
+            height: 60px;
+            width: 120px;
+            margin: 20px 0px 20px 20px;
+            padding: 10px 0px 0px 20px;
+        }
+        #div_1{
+            background-color: #00FFFF;
+        }
+        #div_2{
+            background-color: white;
+        }
+        #div_3{
+            background-color: green;
+        }
+        #div_4{
+            background-color: chartreuse;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div_1">
+
+    </div>
+    <div id="div_2">
+        div区域2
+    </div>
+<div id="div_3">
+    div区域3
+</div>
+<div id="div_4">
+    div区域4
+</div>
+<hr/>
+<input type="button" value="创建并添加节点" onclick="addNode()"/>
+<input type="button" value="删除节点" onclick="deleteNode()"/>
+<input type="button" value="替换节点" onclick="updateNode"/>
+<input type="button" value="克隆节点" onclick="copyNode"/>
+
+</body>
+<script type="text/javascript">
+    function addNode() {
+        //1、创建A标签
+        var a=document.createElement("a");
+        //2、为标签添加href
+        a.setAttribute("href","http://www.itcast.cn");
+
+        //3、为a标签添加文本
+        a.innerHTML="传智播客";
+
+        //4、获得div1元素对象
+        var div_1=document.getElementById("div_1");
+
+        //5、将a标签添加到div1元素对象中
+        div_1.appendChild(a);
+    }
+    function deleteNode() {
+        // 1、获取要删除的对象
+        var div_2=document.getElementById("div_2");
+
+        // 2、获取其父对象
+        var parent=div_2.parentNode;
+        //3、删除
+        parent.removeChild(div_2);
+
+    }
+    function updateNode() {
+        //1、创建一个image标签
+        var img=document.createElement("img");
+
+        //2、添加src标签
+        img.setAttribute("src","1234.jpg");
+
+    // 3、获得  div3
+        var div_3=document.getElementById("div_3");
+
+    // 4、获得  div3的父亲
+        var parent=div_3.parentNode;
+    //  5、通过父亲替换
+        parent.replaceChild(img,div_3);
+
+    }
+    function copyNode() {
+        var div_4=document.getElementById("div_4");
+        var div4_copy=div_4.clone(true);//调用克隆方法克隆该对象    cloneNode接收一个boolean型数据类型  true 克隆所有子元素   false 只克隆本身
+        div_4.appendChild(div4_copy);
+
+    }
+</script>
+</html>

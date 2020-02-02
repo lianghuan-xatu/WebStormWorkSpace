@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+         // 规则用户不能以数字开头  长度在6到10位
+       //参数一  正则表达式  参数二   填写匹配模式 g global/i ignoreCase
+         var reg1=new RegExp("^[a-zA-Z]{1}[a-zA-Z0-9]{5,9}$","g");
+         //简便方式
+        var red2=/^[a-zA-Z]{1}[a-zA-Z0-9_]{5,9}$/g;
+        //如何使用正则
+        //test方法，测试字符串是否与正则匹配
+        var userName="asd123";
+        alert(reg1.test(userName));
+        var str="hello world";
+        alert(str.split(/o/g));
+        alert(str.search(/h/g)); //查找与字符出现的索引
+        alert(str.match(/o/g));//查找并返回与正则匹配的字符串
+        alert(str.replace(/o/g,"e"));   /g全局搜索
+           </script>
+
+</head>
+<body>
+
+</body>
+</html>

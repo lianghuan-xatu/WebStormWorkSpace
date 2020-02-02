@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function addTR() {
+            //获得表单中的内容  name age sex
+            var name=document.form1.username.value;
+            var age=document.form1.age.value;
+            var sex=document.form1.sex.value;
+
+            //组装行对象
+            var tr=document.createElement("tr");
+            tr.innerHTML="<td>"+name+"</td><td>"+age+"</td><td>"+sex+"</td><td><a href='javascript:void(0)' onclick='del(this)'>删除</a></td>";
+            //获得右侧页面的window对象
+            var rightWin=window.parent.frames[2];
+            //获得右侧页面的doc并获得table
+            var doc=rightWin.document;
+           var tab1= doc.getElementById("tab1");
+
+            //将tr添加到table
+            tab1.appendChild(tr);
+
+
+        }
+    </script>
+</head>
+<body>
+<form action="#" name="form1">
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td><input type="text" id="username" name="username"/></td>
+        </tr>
+        <tr>
+            <td>年龄</td>
+            <td><input type="text" id="age" name="age" > </td>
+        </tr>
+        <tr>
+            <td>性别</td>
+            <td><input type="text" id="sex" name="sex" readonly><input type="button" value="请选择" onclick="window.open('select.html','','')"></td>
+        </tr>
+        <tr align="center">
+            <td rowspan="2"><input type="button" value="添加" id="add" onclick="addTR()"/></td>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>

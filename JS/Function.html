@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //  Function对象
+        function fun1(){
+            alert('aaa');
+        }
+        var fun2=new Function("alert('aaa')");
+
+        var fun3=function(){
+            alert('aaa');
+        }
+        // Function 的属性和调用
+        function fun5(a,b){
+            alert(a+b);}
+        alert(fun1.length);   //   length属性是函数的参数个数
+        fun1(1,2);
+        fun1(1,2,3);
+        fun1();
+        //函数的调用，只看函数名称，不看参数列表
+        function a(a,b){
+            alert(a+b);
+        }
+        var a=1;
+        var b=2;
+        a(a,b);
+        //结论 ： 24行函数定义时使用变量a接受，27行 ，又定义了变量名为a的变量   产生了覆盖
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

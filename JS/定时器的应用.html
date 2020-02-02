@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" size="50" id="one"/>
+<input type="button" value="开始" onclick="fun1();"/>
+<input type="button" value="暂停" onclick="fun3()"/>
+<script type="text/javascript">
+    document.getElementById("one").value="haha";
+//点击按钮如何触发方法运行    onclick   fun1();
+    function fun1() {
+       // 获得当前时间
+        fun2();//用户点击之后立刻在输入框显示当前时间   之后  每隔一秒  更新一次
+        //设置条件  ，控制重新定时器的创建
+        if(id==undefined){
+            id=setInterval(fun2,1000);
+        }
+
+
+    }
+    function fun2() {
+        var date=new Date();
+        document.getElementById("one").value=date.toLocaleString();
+
+    }
+    function fun3() {
+        clearInterval(id);
+        id=undefined;
+    }
+</script>
+</body>
+</html>

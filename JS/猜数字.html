@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var num1=Math.round(Math.random()*100);
+        function guess() {
+            var num2=prompt("请输入一个0——100之间的整数","0");
+           if(isNaN(+num2)){
+               alert("请输入有效数字")
+               guess();
+           }
+
+            else if(num2>num1){
+                alert("你输入的大了！");
+                guess();
+            }else if(num2<num1){
+                alert("你输入的小了");
+                guess();
+            }else{
+               var result=confirm("恭喜你输入正确！是否继续游戏");
+               if(result){
+                   num1=Math.round(Math.random()*100);
+                   guess();
+               }else{
+                   window.close();
+               }
+
+
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

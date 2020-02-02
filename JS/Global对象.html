@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //Gloabl对象属于内建对象 在使用时不需要创建实例，直接使用即可
+        //属性：
+        //undefined  原始值undefined是Global的属性
+        //NaN Global引用了NaN
+        //方法：
+
+        //name=%E5%93%88%E5%93%88   哈哈
+        // <a href="http://www.baidu.com/s?wd=%E5%93%88%E5%93%88">点我</a>
+
+        //encodeURL  编码
+        var url="http://ww.baidu.com/s?wd=传智";   http://ww.baidu.com/s?wd=%E4%BC%A0%E6%99%BA
+        alert(encodeURI(url));
+        alert(decodeURI("http://ww.baidu.com/s?wd=%E4%BC%A0%E6%99%BA"));
+        //decodeURI   解码
+        //encodeURIComponent  编码
+        //decodeURIComponent  解码
+        //encodeURIComponent编码比encodeURI转码的多，当提交的内容包含一些敏感关键字符时，应该使用这种方法进行字符转义
+        var url2="http://ww.baidu.com/s?wd=?传/智&";
+        alert(encodeURIComponent(url2));
+        //escape   编码
+        //unescape  解码   已经废弃
+        //isNaN判断是否为NaN值
+        // parseFloat     将字符串转换为小数
+        //parseInt          将字符串转换成整数
+        //
+        var a=NaN;
+        if(isNaN(a)){
+            alert("是NaN");
+        }else {
+            alert("不是NaN");
+        }
+        var str="10";
+        alert(parseInt(str));
+        //parseInt  将字符串转换成整数    一直遇到无法转换的字符或没有字符串
+        //字符串向数字转换
+        //1、运算符
+        //2、包装类的构造方法   new Number(str);
+        //3、parseInt()最强大
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

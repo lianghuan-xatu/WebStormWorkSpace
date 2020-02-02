@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>\</title>
+</head>
+<body>
+<font color="red" id="one">haha</font>
+<font class="two" color="black">hHhHhh</font>
+    <script type="text/javascript">
+        //根据id获得
+        //从整个文档范围内查找id为one的元素对象
+        var one=document.getElementById("one");
+        var twos=document.getElementsByClassName("two");
+        var two=twos[0];
+        alert(two);
+        var fonts=document.getElementsByTagName("font");
+        var font=fonts[0];
+        alert(font);
+
+    </script>
+</body>
+</html>

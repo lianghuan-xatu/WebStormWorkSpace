@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style type="text/css">
+      .one{
+          color: red;
+      }
+  </style>
+
+    <style type="text/css">
+        #one{
+            color: red;
+        }
+    </style>
+    <style type="text/css">
+        .one,one,#one{
+            color: red;
+        }
+    </style>
+    <!--
+    组合选择器：
+    选择器1，选择器2，选择器2{
+    css代码
+    } -->
+
+
+    <style type="text/css">
+        a:link{
+            color: aliceblue;
+        }
+        a:visited{
+            color: blue;
+        }
+        a:hover{
+            color: red;
+        }
+        a:active{
+            color: darkcyan;
+        }
+    </style>
+    <!--
+    伪类选择器n-->
+</head>
+<body>
+<!--
+选择器：  规定css代码影响哪些标签
+    标签名称{
+    css代码}
+    .类名{
+    css代码
+    }
+     标签名 .类名{
+    css代码
+    }
+    #id{
+    css代码
+    }
+    <p id="one">传智播客</p>
+    id选择器
+    id选择器和css选择器的区别：
+    id选择器只能被使用一次
+    -->
+<p class="one">传智播客</p>
+<p>传智播客</p>
+<font class="one">传智播客</font>
+<p id="one">传智播客</p>
+
+<!--
+伪类选择器： 不是选择某个标签  而是先择标签的某种状态（例如a标签的两种选择状态 访问过和没访问过）
+l   link  未访问过
+v   visited  访问过
+h   hover   悬浮
+a   active   激活（点击）
+-->
+<a href="结合方式1.html">点我</a>
+
+</body>
+</html>

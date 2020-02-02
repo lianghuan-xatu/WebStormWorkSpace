@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+
+        .newstyle{   border: #0099FF 1px solid;
+            font-size: 20px;
+            color: #00FFFF;
+            background-color: green;
+            width: 400px;}
+
+
+
+
+
+        .max{
+            border: #0099FF 1px solid;
+            font-size: 20px;
+            color: #00FFFF;
+            background-color: green;
+            width: 400px;
+        }
+        .min{
+            border: #0099FF 1px solid;
+            font-size: 12px;
+            color: #00FFFF;
+            background-color: green;
+            width: 400px;
+        }
+    </style>
+    <script type="text/javascript">
+        ///使用JS来控制CSS样式
+        // function changeSize(size) {
+        //     //让div中的字体变大
+        //     //获得要控制的div
+        //     var div=document.getElementById("newstext");
+        //     //改变div的样式  font—size
+        //     //DHTML==》Dynamic HTML动态HTML技术   整合HTML CSS JS DOM  4个技术
+        //     //增强DOM对象，为DOM对象增加新的函数属性  ==》简化开发
+        //     //DHTML技术已经普及到所有浏览器中了 ，我们现在获得的页面中的所有对象，已经是DHTML对象
+        //     div.style.fontSize=size;
+        // }   //开发不适用  美工一般会提供css代码方案
+        function changeSize(name) {
+        //获得要控制的div
+            var div=document.getElementById("newtext");
+            //将div的class属性改为name
+           // div.setAttribute("class",name);
+            div.className=name;
+        }
+    </script>
+</head>
+<body>
+   <h2>这是一个大新闻</h2>
+<a href="javascript:void(0)" onclick="changeSize('30px')">大字体</a>  //javascript：void(0)  void是javascript代码 输入值为输出0  目的是为了直接执行onclick事件
+   <a href="javascript:void(0)" onclick="changeSize('15px')">中字体</a>
+<a href="javascript:void(0)" onclick="changeSize('7px')">小字体</a>
+<hr/>
+<div id="newtext"class="newstyle">
+    回复雕塑和幅度四经济发达的时间佛的时间<br/>
+    但是看佛但是看佛史东但是<br/>
+    但是看佛肯定是佛肯定是<br/>
+
+</div>
+</body>
+</html>

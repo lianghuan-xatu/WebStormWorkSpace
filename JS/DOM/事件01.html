@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="点点" id="one"/>
+    <input type="text" onblur="alert('onblur');" onfocus="alert('onfocus');" >
+<!-- 事件
+       //blur==>    焦点失去时触发
+       //onfocus==>   鼠标点击文本框，  文本框得到焦点时触发
+-->
+
+<input type="text" onchange="alert('onchange');"/>
+<select onchange="alert('change')">
+    <option>河北</option>
+    <option>河南</option>
+</select>
+    <!--//改变触发事件-->
+
+<input type="text" id="two"/>
+
+
+</body>
+</html>
+<script type="text/javascript" onclick="alert('ccc');">
+    //事件的概念
+    //就是为元素添加一个新的属性，属性的类型是Function 类型
+    //Function 执行的时机要看属性的名称
+
+    //为页面元素添加事件的两种方式
+    //方式1:
+    //1、获得id为one的按钮
+    var one = document.getElementsById("one");
+    //2、为该按钮对象添加新的属性
+    // one.onclick=function () {
+    //     alert('bbb');
+    //
+    // }
+    //方式2：
+    //就是在标签上加上如下代码：   onclick="alert('ccc');"
+
+    var one = document.getElementById("one");
+    alert(one.onclick);
+
+    //事件
+    //onkeydown   某个键盘按键被按下   开发中这个事件使用的比较多  下面两个基本不会用
+    //onkeypress   某个键盘按键被按下并松开
+    //onkeyup    某个键盘按键被松开
+
+
+    document.getElementById("two").onkeydown = function (obj) {
+        // alert('onkeydown');
+        //1、获得用户按下的按键
+        var code = obj.keyCode;
+        //2、判断按下的键是否回车
+        if (code == 13) {
+            alert('您按下了回车');
+            //Event对象可以理解为“侦探” ，有关事件的详情可以通过侦探获得
+            //Event对象在浏览器使用事件函数时，会传递过来，我们只需要接受即可
+            //keyCode属性===》获得按键的unicode编码
+
+
+        }
+    }
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    //将多选框first中的选择选项移动到多选框second
+    document.getElementById("add").onclick=function () {
+      //获得select元素对象
+        var first=document.getElementById("first");
+        var second=document.getElementById("second");
+        //获得select元素中的option对象数组
+        var options=first.getElementsByTagName('option');
+        for(var i=0;i<options.length;i++){
+            var option=option[i];
+            //判断option是否被选中
+            if(option.selected){
+                second.appendChild(option);
+                i--; //当first中的一个元素被移出之后  后面的对象的序号会发生变化  所以每次都会少一个元素
+
+            }
+
+        }
+    }
+</script>
